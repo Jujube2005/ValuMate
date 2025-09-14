@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VALUMAT</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>VALUMAT</h1>
+
+  <form id="productForm">
+    <input type="text" id="name" placeholder="ชื่อสินค้า" required>
+    <input type="number" id="quantity" placeholder="ปริมาณ" required>
+    <select id="unit">
+      <option value="mg">mg</option>
+      <option value="g">g</option>
+      <option value="kg">kg</option>
+      <option value="ml">ml</option>
+      <option value="l">l</option>
+    </select>
+    <input type="number" id="price" placeholder="ราคา (บาท)" required>
+    <button type="submit">เพิ่มสินค้า</button>
+  </form>
+
+  <button id="clearProducts">ล้างสินค้าทั้งหมด</button>
+
+  <h2>รายการสินค้า</h2>
+  <ul id="productItems"></ul>
+
+  <h2>ผลลัพธ์การเปรียบเทียบ</h2>
+  <table border="1" id="resultTable">
+    <thead>
+      <tr><th>สินค้า</th><th>ราคาต่อหน่วย (บาท/mg/ml)</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <button id="compareBtn">เปรียบเทียบ</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
