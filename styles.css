@@ -119,6 +119,83 @@ form button:hover {
   background-color: #f1f1f1;
 }
 
+.modal {
+  position: fixed;
+  top: 0; left: 0; right:0; bottom:0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  min-width: 300px;
+}
+
+
+/* ------------------ edit ------------------ */
+.edit-btn {
+      background-color: #4CAF50; /* เขียว */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.edit-btn:hover {
+    background-color: #45a049; /* เขียวเข้มเมื่อ hover */
+}
+
+.delete-btn {
+    background-color: #f44336; /* แดง */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+/* ------------------ delete ------------------ */
+.delete-btn:hover {
+    background-color: #d32f2f; /* แดงเข้มเมื่อ hover */
+}
+
+/*จัดเรียงปุ่มให้ชิดขวาใน list item*/
+.product-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+
+.product-card p {
+    margin: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between; /* ชื่อสินค้าอยู่ซ้าย ปุ่มอยู่ขวา */
+    align-items: center;
+}
+
+.btn-group button {
+    margin-left: 8px; /* เว้นระยะระหว่างปุ่ม */
+}
+
 /* ------------------ Responsive ------------------ */
 @media (max-width: 600px) {
   form {
