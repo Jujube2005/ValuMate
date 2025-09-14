@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VALUMAT</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <h1>VALUMAT</h1>
 
@@ -28,10 +30,32 @@
   <h2>รายการสินค้า</h2>
   <ul id="productItems"></ul>
 
+  <div id="productModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <h3 id="modalTitle">เพิ่มสินค้า</h3>
+      <input type="text" id="modalName" placeholder="ชื่อสินค้า">
+      <input type="number" id="modalQuantity" placeholder="ปริมาณ">
+      <select id="modalUnit">
+        <option value="mg">mg</option>
+        <option value="g">g</option>
+        <option value="kg">kg</option>
+        <option value="ml">ml</option>
+        <option value="l">l</option>
+      </select>
+
+      <input type="number" id="modalPrice" placeholder="ราคา">
+      <button id="modalSave">บันทึก</button>
+      <button id="modalCancel">ยกเลิก</button>
+    </div>
+  </div>
+
   <h2>ผลลัพธ์การเปรียบเทียบ</h2>
   <table border="1" id="resultTable">
     <thead>
-      <tr><th>สินค้า</th><th>ราคาต่อหน่วย (บาท/mg/ml)</th></tr>
+      <tr>
+        <th>สินค้า</th>
+        <th>ราคาต่อหน่วย (บาท)</th>
+      </tr>
     </thead>
     <tbody></tbody>
   </table>
@@ -39,5 +63,5 @@
 
   <script src="script.js"></script>
 </body>
-</html>
 
+</html>
